@@ -3,6 +3,7 @@ import Title from '../components/Title'
 import { assets, userBookingsDummyData } from '../assets/assets'
 
 const MyBookings = () => {
+    // eslint-disable-next-line no-unused-vars
     const[ bookings, setBookings ] = useState(userBookingsDummyData);
   return (
     <div className='py-28 md:py-35 px-4 md:px-16 lg:px-24 xl:px-32'>
@@ -49,7 +50,15 @@ const MyBookings = () => {
                             </div>
                        </div>
                        {/* Payment */}
-                       <div></div>
+                       <div className='flex flex-col items-start justify-center pt-5'>
+                        <div className='flex items-center gap-2'>
+                            <div className={`w-3 h-3 rounded-full ${booking.isPaid ? 'bg-green-500': 'bg-red-500'}`}></div>
+                            <p className={`text-sm rounded-full ${booking.isPaid ? 'text-green-500': 'text-red-500'}`}>
+                                {booking.isPaid ? 'Paid': 'Unpaid'}
+                            </p>
+                        </div>
+
+                       </div>
                 </div>
             ))
 
