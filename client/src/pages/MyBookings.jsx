@@ -38,12 +38,12 @@ const MyBookings = () => {
                        </div>
                        {/* Date & Timing */}
                        <div className='flex flex-col items-start md:items-center md:gap-6 gap-8 mt-3'>
-                            <div>
+                            <div className='flex flex-col items-start justify-center'>
                                 <p>Check In</p>
                                 <p className='className="text-sm text-gray-600"'>{
                                     new Date(booking.checkInDate).toDateString()}</p>  
                             </div>
-                            <div>
+                            <div className='flex flex-col items-start justify-center'>
                                 <p>Check Out</p>
                                 <p className='className="text-sm text-gray-600"'>{
                                     new Date(booking.checkOutDate).toDateString()}</p>  
@@ -57,7 +57,11 @@ const MyBookings = () => {
                                 {booking.isPaid ? 'Paid': 'Unpaid'}
                             </p>
                         </div>
-
+                            {!booking.isPaid && (
+                                <button className='mt-4 bg-blue-600 text-white px-4 py-2 rounded-lg'>
+                                    Pay Now
+                                </button>
+                            )}
                        </div>
                 </div>
             ))
