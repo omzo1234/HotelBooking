@@ -13,7 +13,7 @@ const Dashbord = () => {
                <img src={assets.totalBookingIcon} className='h-4 max-sm:hidden'  />
                <div className='flex flex-col font-medium sm:'>
                 <p className='text-blue-500 text-lg'>Total Booking</p>
-                <p className='text-neutral-50 text-base'>{dashboardDummyData.totalBookings}</p>
+                <p className='text-neutral-500 text-base'>{dashboardDummyData.totalBookings}</p>
                </div>
         </div>
         {/*--- total revenue ---*/}
@@ -21,7 +21,7 @@ const Dashbord = () => {
                <img src={assets.totalBookingIcon} className='h-4 max-sm:hidden'  />
                <div className='flex flex-col font-medium sm:'>
                 <p className='text-blue-500 text-lg'>Total Revenue</p>
-                <p className='text-neutral-50 text-base'>{dashboardDummyData.totalRevenue}</p>
+                <p className='text-neutral-500 text-base'>{dashboardDummyData.totalRevenue}</p>
                </div>
         </div>
         
