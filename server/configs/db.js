@@ -6,7 +6,7 @@ const connectDB = async () => {
         await mongoose.connect(`${process.env.MONGODB_URI}/Hotel-booking`)
     } catch (error) {
        console.log(error.message);
-    }
+    } 
 }
 
 export default connectDB;
